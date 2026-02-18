@@ -1,0 +1,53 @@
+@import url(./style.css);
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    background-image: linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
+    color: var(--white);
+}
+#menuheading, #locheading, #offheading{
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
+    font-size: 2.5em;
+    color: var(--red);
+}
+
+.menu th{
+    color:var(--green);
+    font-size: 1.8em;
+}
+table{
+    width: 100%;
+    padding: 1em;
+}
+
+@media screen and (max-width:900px) and (min-width:651px){
+    .menu{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:650px) {
+    .menu{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:850px) {
+    nav{
+        display: none;
+    }
+     #menu-toggle:checked + nav{
+        /* display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding: 3em 6em;
+        position: absolute; */
+        top: 3.5em;
+        right: 0.5em;
+        background-image: linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
+    }
+    #bar{
+        cursor: pointer;
+        color: var(--yellow);
+    }
+}
